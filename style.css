@@ -1,0 +1,226 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3E5D8; 
+    color: #5C4033; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #FAF3EB; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: #8B5E3C; 
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#postForm {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #FDF8F3; 
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#postForm input,
+#postForm textarea {
+    width: calc(100% - 30px);
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #C2A489; 
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #FDF8F3;
+    font-family: 'Poppins', sans-serif;
+}
+
+#postForm button {
+    padding: 15px 30px;
+    background: #8B5E3C; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#postForm button:hover {
+    background: #6D4C41; 
+}
+
+#posts .post {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #FAE8D4; 
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#posts .post h2 {
+    color: #8B5E3C;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#posts .post p {
+    color: #5C4033;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+#posts .post button {
+    padding: 10px 15px;
+    margin-right: 10px;
+    background: #8B5E3C; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease-in-out;
+}
+
+#posts .post button.edit-btn {
+    background: #A67C52; 
+}
+
+#posts .post button.delete-btn {
+    background: #D1725C; 
+}
+
+#posts .post button:hover {
+    opacity: 0.9;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #FAF3EB; 
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-content h2 {
+    color: #8B5E3C;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5C4033;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #C2A489;
+    border-radius: 8px;
+    background-color: #FDF8F3;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: border 0.2s ease-in-out;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    border-color: #8B5E3C;
+    outline: none;
+}
+
+.modal-content .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.modal-content button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-content button#saveEdit {
+    background: #8B5E3C; 
+}
+
+.modal-content button#cancelEdit,
+.modal-content button#cancelDelete {
+    background: #A67C52; 
+}
+
+.modal-content button#confirmDelete {
+    background: #D1725C; 
+}
+
+.modal-content button:hover {
+    opacity: 0.9;
+}
+
+.floating-emoji {
+    position: absolute;
+    font-size: 2rem;
+    pointer-events: none; 
+    animation: floatUp 4s linear forwards;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
